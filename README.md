@@ -1,5 +1,5 @@
-# KIM
-Kitchen Inventory Manager (KIM) is an intelligent inventory tracking system designed to streamline kitchen management for households, restaurants, and food businesses. It helps users efficiently track, manage, and replenish kitchen supplies, reducing waste and optimizing grocery planning.
+# Savry
+Savry is an intelligent inventory tracking system designed to streamline kitchen management for households, restaurants, and food businesses. It helps users efficiently track, manage, and replenish kitchen supplies, reducing waste and optimizing grocery planning.
 Key Features:
 
 ✅ Real-Time Inventory Tracking – Keep an updated list of all kitchen ingredients and supplies.
@@ -17,4 +17,4 @@ Tech Stack:
     CI/CD: GitHub Actions
     Deployment: Vercel (Web), AWS/DigitalOcean (Backend)
 
-KIM simplifies kitchen management, ensuring you never run out of essential ingredients while minimizing food waste. 🚀
+Savry simplifies kitchen management, ensuring you never run out of essential ingredients while minimizing food waste. 🚀
