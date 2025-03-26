@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import Wip from "./components/wip/Wip"
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <div className='bg-red-400'>;,fdpsikn</div>
+    <div id='main' className='bg-[#EAEDE5] min-h-screen'>
+      <Wip />
+    </div>
     </>
   )
 }
