@@ -30,7 +30,7 @@ const Progress: React.FC<ProgressProps> = ({ progress }) => {
           <rect x="0" y="140" width="100" height="20" />
         </clipPath>
         <ellipse cx="50" cy="140" rx="45" ry="15" fill="rgba(130, 141, 114, 0.8)" stroke="black" strokeWidth="1.2" clipPath="url(#bottomClip)" /> */}
-        {/* This ellipse should be used when progress is is more than 10% */}
+        {/* This ellipse should be used when progress is more than 10% */}
       </svg>
       <p className="text-[1.5vw] pxl text-gray-800 mt-2 ml-4">Progress {progress}%</p>
     </div>
