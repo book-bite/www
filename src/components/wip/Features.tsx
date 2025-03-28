@@ -47,22 +47,14 @@ export default function Features() {
           <Signal className="w-4 h-4 text-black" />
           <Wifi className="w-4 h-4 text-black" />
           <div className="relative flex items-center">
-  {/* <BatteryFull className="w-6 h-6 text-black" /> */}
-
-  {/* Battery Percentage with Dynamic Background Fill */}
   <span className="right-1 text-xs font-bold text-black px-1 rounded-md relative overflow-hidden">
-    {/* Background Fill */}
     <div
       className="absolute inset-0 bg-yellow-400"
       style={{ width: `${battery}%` }}
     ></div>
-
-    {/* Battery Text */}
     <span className="relative">{battery}%</span>
   </span>
 </div>
-
-
         </div>
       </div>
       {battery === 20 && !lowPower && (
@@ -84,7 +76,7 @@ export default function Features() {
           <span>← Notes</span>
           <span>...</span>
         </div>
-        <p className="text-gray-400 text-center text-sm">25 March 2025 at {localTime}</p>
+        <p className="text-gray-400 text-center text-sm">25 March 2025 at 10:31</p>
         <ul className="mt-3 space-y-3">
           {[
             "Realtime Inventory Tracking",
