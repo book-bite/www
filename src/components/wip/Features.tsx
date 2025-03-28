@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { CheckCircle, Signal, Wifi, BatteryFull } from "lucide-react";
 
 export default function Features() {
-  const [battery, setBattery] = useState(25);
+  const [battery, setBattery] = useState(78);
   const [lowPower, setLowPower] = useState(false);
   const [brightness, setBrightness] = useState(1);
   const [localTime, setLocalTime] = useState(getCurrentTime());
@@ -10,7 +10,7 @@ export default function Features() {
   useEffect(() => {
     const batteryInterval = setInterval(() => {
       setBattery((prev) => (prev > 20 ? prev - 1 : 20));
-    }, 5000);
+    }, 5000); // 100 - 20 (6:40), 78 - 20 (4:48)
 
     return () => clearInterval(batteryInterval);
   }, []);
@@ -30,7 +30,6 @@ export default function Features() {
       setBrightness(1);
     }
   }, [lowPower]);
-
   function getCurrentTime() {
     const now = new Date();
     return now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", hour12: false });
@@ -39,7 +38,7 @@ export default function Features() {
   return (
     <div
       id="phone-container"
-      className="bg-[#EAEDE5] w-[21vw] h-[25vw] relative top-[12.2vw] left-[76vw] rounded-tr-[3vw] rounded-tl-[3vw] pt-[1vw] border-2 border-black"
+      className="bg-[#EAEDE5] w-[21vw] h-[50vh] mt-auto absolute bottom-0 left-[76vw] rounded-tr-[3vw] rounded-tl-[3vw] pt-[1vw] border-2 border-black"
       style={{ filter: `brightness(${brightness})` }}
     >
       <div className="flex justify-between items-center px-10 py-2 w-full rounded-t-3xl">
@@ -48,15 +47,26 @@ export default function Features() {
           <Signal className="w-4 h-4 text-black" />
           <Wifi className="w-4 h-4 text-black" />
           <div className="relative flex items-center">
-            <BatteryFull className="w-6 h-6 text-black" />
-            <span className="absolute right-1 text-xs font-bold text-black bg-yellow-400 px-1 rounded-md">
-              {battery}
-            </span>
-          </div>
+  {/* <BatteryFull className="w-6 h-6 text-black" /> */}
+
+  {/* Battery Percentage with Dynamic Background Fill */}
+  <span className="right-1 text-xs font-bold text-black px-1 rounded-md relative overflow-hidden">
+    {/* Background Fill */}
+    <div
+      className="absolute inset-0 bg-yellow-400"
+      style={{ width: `${battery}%` }}
+    ></div>
+
+    {/* Battery Text */}
+    <span className="relative">{battery}%</span>
+  </span>
+</div>
+
+
         </div>
       </div>
       {battery === 20 && !lowPower && (
-        <div className="absolute bottom-[5vw] left-1/2 transform -translate-x-1/2 bg-white/40 backdrop-blur-[0.5vw] text-black w-[85%] max-w-[320px] pt-5 pb-2 px-6 rounded-xl shadow-2xl border ">
+        <div className="absolute bottom-[5.7vw] left-1/2 transform -translate-x-1/2 bg-white/40 backdrop-blur-[0.5vw] text-black w-[85%] max-w-[320px] pt-5 pb-2 px-6 rounded-xl shadow-2xl border ">
           <p className="font-semibold text-lg text-center">Low Battery</p>
           <p className="text-sm text-gray-600 text-center mt-1">
             {battery}% of battery remaining
