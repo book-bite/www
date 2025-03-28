@@ -1,5 +1,7 @@
+import Contact from './Contact'
 import Features from './Features'
 import Progress from './Progress'
+import Savry from './Savry'
 import Ud from './Ud'
 
 const Wip = () => {
@@ -8,6 +10,8 @@ const Wip = () => {
         <Ud />
         <Progress progress={1}/>
         <Features />
+        <Savry />
+        <Contact />
     </div>
   )
 }

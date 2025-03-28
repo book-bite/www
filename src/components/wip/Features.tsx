@@ -38,7 +38,7 @@ export default function Features() {
   return (
     <div
       id="phone-container"
-      className="bg-[#EAEDE5] w-[21vw] h-[50vh] mt-auto absolute bottom-0 left-[76vw] rounded-tr-[3vw] rounded-tl-[3vw] pt-[1vw] border-2 border-black"
+      className="bg-[#EAEDE5] w-[21vw] h-[45vh] mt-auto absolute bottom-0 left-[76vw] rounded-tr-[3vw] rounded-tl-[3vw] pt-[1vw] border-2 border-black shadow-2xl"
       style={{ filter: `brightness(${brightness})` }}
     >
       <div className="flex justify-between items-center px-10 py-2 w-full rounded-t-3xl">
