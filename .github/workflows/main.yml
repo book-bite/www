@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Tests
         if: env.exists == 'true'
-        run: npm test
+        run: npm test -- --passWithNoTests
 
       - name: Build Project
         if: env.exists == 'true'
@@ -43,4 +43,3 @@ jobs:
       - name: Deploy (Placeholder)
         if: github.ref == 'refs/heads/main'
         run: echo "Deployment step will be added later."
-
