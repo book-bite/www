@@ -33,7 +33,7 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           account-id: ${{ secrets.CF_ACCOUNT_ID }}
-          project-name: "savry"  # Change this if your Cloudflare project has a different name
+          project-name: "savry"  
           api-token: ${{ secrets.CF_API_TOKEN }}
-          directory: "dist"  # Change this if your build output is in a different folder
+          directory: "dist"  
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
