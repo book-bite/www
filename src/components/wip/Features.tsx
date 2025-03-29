@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { CheckCircle, Signal, Wifi, BatteryFull } from "lucide-react";
+import { CheckCircle, Signal, Wifi} from "lucide-react";
 
 export default function Features() {
   const [battery, setBattery] = useState(78);
