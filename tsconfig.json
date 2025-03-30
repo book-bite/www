@@ -1,7 +1,13 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-jsx",                // Use "react" if you're using an older version of React
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "__tests__"]
 }
