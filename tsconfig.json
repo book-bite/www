@@ -1,13 +1,19 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",],
     "target": "esnext",
     "module": "esnext",
-    "jsx": "react-jsx",                // Use "react" if you're using an older version of React
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "noEmit": true
   },
-  "include": ["src", "__tests__"]
+  "include": ["src"],
+  "exclude": ["__tests__"]  
 }
