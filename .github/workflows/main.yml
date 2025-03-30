@@ -14,7 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+<<<<<<< HEAD
       # 2. Setup Node.js environment (ensure Node.js 16+)
+=======
+      # 2. Setup Node.js environment (adjust node-version as needed)
+>>>>>>> c8b1bd5 (cicd)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
