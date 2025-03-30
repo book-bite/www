@@ -4,7 +4,7 @@ const Md = () => {
       <div className="wip text-[40vw] inter text-[#828D72] leading-none">
         WIP
       </div>
-      <div className="relative bottom-[9.3vw] left-[3.2vw] text-[3.4vw] inter mix-blend-difference text-[#828D72] px-4">
+      <div className="relative bottom-[9.3vw] left-[3.07vw] text-[3.4vw] inter mix-blend-difference text-[#828D72] px-4">
         WORK IN PROGRESS
       </div>
     </div>
