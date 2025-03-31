@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD for Production
 
 on:
   push:
@@ -10,34 +10,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Check out the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 4. Run tests (Optional: Continue deployment even if tests fail)
       - name: Run tests
         run: npm test || echo "Tests failed, continuing deployment"
 
-      # 5. Build the project
       - name: Build project
         run: npm run build
 
-      # 6. Deploy built files via FTP to GoDaddy hosting
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          ftp-server: ftps://savry.in            
+          ftp-server: ftps://savry.in
           ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist                      
+          local-dir: ./dist
           server-dir: /public_html
