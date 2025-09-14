@@ -3,9 +3,9 @@ import Contact from './Contact';
 import Features from './Features';
 import Md from './Md';
 import Progress from './Progress';
-import Savry from './Savry';
 import Ud from './Ud';
+import BookBite from "./BookBite";
 const Wip = () => {
-    return (_jsxs("div", { className: 'bg-[#EAEDE5] min-h-screen flex flex-col', children: [_jsx(Ud, {}), _jsx(Md, {}), _jsx(Progress, { progress: 1 }), _jsx(Features, {}), _jsx(Savry, {}), _jsx(Contact, {})] }));
+    return (_jsxs("div", { className: 'bg-[#EAEDE5] min-h-screen flex flex-col', children: [_jsx(Ud, {}), _jsx(Md, {}), _jsx(Progress, { progress: 1 }), _jsx(Features, {}), _jsx(BookBite, {}), _jsx(Contact, {})] }));
 };
 export default Wip;

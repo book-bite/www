@@ -2,7 +2,7 @@ import Contact from './Contact'
 import Features from './Features'
 import Md from './Md'
 import Progress from './Progress'
-import Savry from './Savry'
+import BookBite from './BookBite'
 import Ud from './Ud'
 
 const Wip = () => {
@@ -12,7 +12,7 @@ const Wip = () => {
         <Md />
         <Progress progress={1}/>
         <Features />
-        <Savry />
+        <BookBite />
         <Contact />
     </div>
   )

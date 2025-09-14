@@ -1,39 +1,39 @@
-name: CI/CD for Production
+# name: CI/CD for Production
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build-and-deploy:
-    if: github.repository == 'Savry-in/www'
-    runs-on: ubuntu-latest
+# jobs:
+#   build-and-deploy:
+#     if: github.repository == 'Savry-in/www'
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: Run tests
-        run: npm test || echo "Tests failed, continuing deployment"
+#       - name: Run tests
+#         run: npm test || echo "Tests failed, continuing deployment"
 
-      - name: Build project
-        run: npm run build
+#       - name: Build project
+#         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          server: savry.in
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./dist/
-          server-dir: /public_html/
+#       - name: Deploy via FTP
+#         uses: SamKirkland/FTP-Deploy-Action@4.1.0
+#         with:
+#           server: savry.in
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           protocol: ftps
+#           local-dir: ./dist/
+#           server-dir: /public_html/

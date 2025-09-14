@@ -4,7 +4,7 @@ import Contact from '../components/wip/Contact';
 import Features from '../components/wip/Features';
 import Md from '../components/wip/Md';
 import Progress from '../components/wip/Progress';
-import Savry from '../components/wip/Savry';
+import BookBite from '../components/wip/BookBite';
 import Ud from '../components/wip/Ud';
 describe('Smoke tests for /components/wip', () => {
     test('renders Contact without crashing', () => {
@@ -20,7 +20,7 @@ describe('Smoke tests for /components/wip', () => {
         render(_jsx(Progress, { progress: 1 }));
     });
     test('renders Savry without crashing', () => {
-        render(_jsx(Savry, {}));
+        render(_jsx(BookBite, {}));
     });
     test('renders Ud without crashing', () => {
         render(_jsx(Ud, {}));

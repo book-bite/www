@@ -88,18 +88,18 @@ export default function Features() {
       <span>...</span>
     </div>
     <p className="text-gray-400 text-center text-[clamp(0.7rem,0.9rem,1rem)]">
-      25 March 2025 at 10:31
+      09 September 2025 at 15:43
     </p>
-    <ul className="mt-3 space-y-3">
+    <ul className="mt-6 space-y-3">
       {[
-        "Realtime Inventory Tracking",
-        "Expiry date alerts",
-        "Automated stock updates",
-        "Grocery list generator",
-        "Recipe suggestions",
-        "Multi-user Collaboration",
+        "Choose mode : Dine-in or Takeaway",
+        "Pick your favorite restaurant",
+        "Set an ETA, get your food ready by ETA",
+        "Arrive at ETA, sit on your reserved table",
+        "Dine-in or just Takeaway, without waiting",
+        "One click re-order, from order history",
       ].map((feature, index) => (
-        <li key={index} className="flex items-center space-x-2 text-gray-700 text-[clamp(0.8rem,1rem,1.2rem)]">
+        <li key={index} className="flex items-center space-x-2 text-gray-700 text-[clamp(0.8rem,0.95rem,1.2rem)]">
           <CheckCircle className="text-yellow-500 w-5 h-5" />
           <span>{feature}</span>
         </li>
