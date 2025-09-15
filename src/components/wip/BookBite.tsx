@@ -4,7 +4,7 @@ const BookBite = () => {
           <h1 className="BookBite text-[#828D72] relative left-[2vw] pxl cu:text-[4.8vw] md:text-[6vw] tracking-wider ">BookBite</h1>
           <div className="flex gap-[2vw]">
             <div className="data cu:w-[60%] md:w-[70%] relative left-[2vw] flex flex-col items-center justify-center font-mono text-[clamp(30rem, 5vw, 50rem)]">
-              <p>A simple dining companion that brings reserve, pre‑order, to dine-in or takeaway into one app. It lists trustworthy restaurant profiles, category‑based menus, and clear details so decisions are fast and confident.<br />
+              <p>We've all been there, driving across the city only to find your favorite restaurant packed, or waiting 30 minutes for food that could've been ready when you arrived. BookBite eliminates these everyday frustrations by bringing convenience to your fingertips.<br />
               <br />
               <a href="" className="text-left text-[#6a9b20]">Contact</a> us for more info.</p>
             </div>
