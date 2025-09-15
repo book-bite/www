@@ -90,14 +90,14 @@ export default function Features() {
     <p className="text-gray-400 text-center text-[clamp(0.7rem,0.9rem,1rem)]">
       09 September 2025 at 15:43
     </p>
-    <ul className="mt-6 space-y-3">
+    <ul className="mt-10 space-y-3">
       {[
-        "Choose mode : Dine-in or Takeaway",
+        "Choose between : Dine-in or Takeaway",
         "Pick your favorite restaurant",
         "Set an ETA, get your food ready by ETA",
-        "Arrive at ETA, sit on your reserved table",
+        "Reserve tables, for you and your guests",
         "Dine-in or just Takeaway, without waiting",
-        "One click re-order, from order history",
+        "One click re-order",
       ].map((feature, index) => (
         <li key={index} className="flex items-center space-x-2 text-gray-700 text-[clamp(0.8rem,0.95rem,1.2rem)]">
           <CheckCircle className="text-yellow-500 w-5 h-5" />
